@@ -1,0 +1,17 @@
+-- Website Concept -- 
+
+The Flinders Uni Skill Share (FUSS) website is a website were university students come to Exhange skills and other services helping them with their study as well as creating a better community for students and staff. This can help solve the issues of students that either lack the knowledge to complete certain tasks or studies or just aren’t motivated enough due to the lack of collaboration surrounding them.  
+
+One of the main reasons for this is that university students are statistically within the age gap of 18-22 which is an important and hard time in their life. For many students this means leaving their home and staying in a place on their own, which means they have a lot to learn and might even need to work during this period to earn money to live. With all this stress in mind it's easy to see why some can neglect their schoolwork, especially if it's something they don't understand. Even for people who are older they possibly have more to worry about depending on whether they have a family or higher position at work etc. 
+
+-- Target Audience -- 
+
+This website is designed to focus on university students as its main targets as it allows them to get help with study or even tasks around their home by performing the same services to other students. This targets any university students that go to any kind of university although the concept will mostly be limited to other students at the user's current university since they most likely will be in person for the tutoring. Some exceptions can be made with tutoring done online. The reason that university students are the focus is because whilst they are doing university, they also have a lot to do outside of that creating a lot of stress as well as university being harder than what they have previously dealt with. 
+
+-- Scope Statement -- 
+
+The key aspect of the website is a token-based transactional service. The way this will function is that when students give out their services (e.g. helping someone with math's, programming, cleaning, creating meals etc.) they gain a token which in return allows them to buy a service from another student. There will need to be a database/storage solution to keep and show the number of tokens a student has as well as a program that removes and adds these tokens depending on whether they are buying or selling a service.  
+
+On the website it will also contain a login section which will take forms of identification to login to the user such as a username and password which will let them access their account. There will need to be encryption methods to store and read the inputs to prevent accounts from being accessed by other people through methods of hacking.  
+
+The last main area is the search section which will consist of a search engine to filter through specific services and an interface that shows all the different people with descriptions of themselves as well as the service they intend to give. The search engine will use filtering to take the input of the user and match it with the information stored for each other user on the website to see if it matches. Then the graphical interface will read which student matches with the search and will in turn display their services and information stored in their database clearly and precisely.  
