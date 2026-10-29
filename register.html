@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FUSS | Register</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ---- Register Page Specific Styling ---- */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(180deg,#1e3a8a,#0f172a);
+      color: #fff;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto;
+    }
+
+    .register-container {
+      background: white;
+      color: #111;
+      width: 100%;
+      max-width: 420px;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .register-container h1 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #1e3a8a;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    button {
+      background: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #334155;
+    }
+
+    .extra-links {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .extra-links a {
+      color: #1e3a8a;
+      text-decoration: none;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      display: none;
+    }
+
+    .success-message {
+      color: green;
+      font-size: 14px;
+      text-align: center;
+      display: none;
+    }
+
+    @media (max-width: 480px) {
+      .register-container {
+        margin: 0 16px;
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="register-container" role="main">
+    <h1>Create Your FUSS Account</h1>
+
+    <p id="registerError" class="error-message" aria-live="assertive"></p>
+    <p id="registerSuccess" class="success-message" aria-live="polite"></p>
+
+    <form id="registerForm" action="php/register.php" method="POST" novalidate>
+      <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your student email" required>
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter a strong password" required>
+      </div>
+
+      <div>
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div class="extra-links">
+      Already have an account? <a href="signIn.html">Sign In</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('registerForm');
+    const errorMsg = document.getElementById('registerError');
+    const successMsg = document.getElementById('registerSuccess');
+
+    // Check for error messages in URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const errorParam = urlParams.get('error');
+    const successParam = urlParams.get('success');
+
+    if (errorParam) {
+      errorMsg.textContent = '❌ ' + errorParam;
+      errorMsg.style.display = 'block';
+    }
+
+    if (successParam) {
+      successMsg.textContent = '✅ Registration successful!';
+      successMsg.style.display = 'block';
+    }
+
+    form.addEventListener('submit', function(e) {
+      const username = document.getElementById('username').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      if (!username || !email || !password || !confirmPassword) {
+        e.preventDefault();
+        errorMsg.textContent = '⚠️ Please fill out all fields.';
+        errorMsg.style.display = 'block';
+        successMsg.style.display = 'none';
+        return;
+      }
+
+      if (password.length < 6) {
+        e.preventDefault();
+        errorMsg.textContent = 'Password must be at least 8 characters long.';
+        errorMsg.style.display = 'block';
+        successMsg.style.display = 'none';
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        e.preventDefault();
+        errorMsg.textContent = 'Passwords do not match.';
+        errorMsg.style.display = 'block';
+        successMsg.style.display = 'none';
+        return;
+      }
+
+      errorMsg.style.display = 'none';
+      successMsg.textContent = 'Creating your account...';
+      successMsg.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

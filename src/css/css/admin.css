@@ -1,0 +1,501 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: #f7f9fc;
+  color: #111827;
+}
+
+/* Header */
+.top-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #0f172a, #1e3a8a);
+  color: white;
+  padding: 16px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.top-banner .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#refreshBtn {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+#refreshBtn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.logout {
+  background: whitesmoke;
+  color: #0f172a;
+}
+
+.logout:hover {
+  background: #e5e7eb;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 64px;
+  bottom: 0;
+  width: 250px;
+  background: #1e293b;
+  color: white;
+  overflow-y: auto;
+  z-index: 900;
+  display: block;
+  flex-direction: initial;
+  padding-top: 24px; /* Add space below top banner */
+  padding-bottom: 0;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block; /* Ensure ul displays as block */
+}
+
+.sidebar nav li {
+  padding: 16px 24px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.2s;
+  font-weight: 500;
+  display: block; /* Ensure li displays as block */
+}
+
+.sidebar nav li:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.sidebar nav li.active {
+  background: #1e3a8a;
+  border-left: 4px solid #60a5fa;
+}
+
+/* Regular Navigation Section */
+.nav-divider {
+  height: 10px;
+  background: #334155;
+  margin: 16px 0;
+}
+
+.sidebar .regular-nav {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 8px;
+}
+
+.sidebar .regular-nav .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.2s;
+  font-weight: 500;
+  min-height: 60px;
+}
+
+.sidebar .regular-nav .nav-link:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.sidebar .regular-nav .nav-link span {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
+
+.sidebar .regular-nav .nav-link.active {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Main Content */
+main {
+  margin-left: 250px;
+  margin-top: 64px;
+  padding: 32px;
+  min-height: calc(100vh - 64px);
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.panel h1 {
+  color: #1e3a8a;
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+.panel h2 {
+  color: #334155;
+  margin: 24px 0 16px 0;
+  font-size: 20px;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border-left: 4px solid #1e3a8a;
+}
+
+.stat-card h3 {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  color: #1e3a8a;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Tables */
+.admin-table {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin-top: 16px;
+}
+
+.admin-table thead {
+  background: #f3f4f6;
+}
+
+.admin-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #1e3a8a;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.admin-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status Badges */
+.status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status.active {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status.suspended {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.btn.primary {
+  background: #1e3a8a;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #334155;
+}
+
+.btn.small {
+  padding: 6px 12px;
+  font-size: 13px;
+  margin-right: 4px;
+}
+
+.btn.edit {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn.edit:hover {
+  background: #2563eb;
+}
+
+.btn.suspend,
+.btn.deactivate {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn.suspend:hover,
+.btn.deactivate:hover {
+  background: #d97706;
+}
+
+.btn.reactivate {
+  background: #10b981;
+  color: white;
+}
+
+.btn.reactivate:hover {
+  background: #059669;
+}
+
+.btn.unsuspend {
+  background: #10b981;
+  color: white;
+}
+
+.btn.unsuspend:hover {
+  background: #059669;
+}
+
+.btn.delete {
+  background: #ef4444;
+  color: white;
+}
+
+.btn.delete:hover {
+  background: #dc2626;
+}
+
+/* Forms */
+form {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin-top: 16px;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  font-family: inherit;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+/* Lists */
+.list {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  list-style: none;
+}
+
+.list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 15px;
+  color: #374151;
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+/* Inline Forms */
+.inline-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.inline-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* Messages */
+.message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+.message.success {
+  background: #d1fae5;
+  color: #065f46;
+  border-left: 4px solid #10b981;
+}
+
+.message.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border-left: 4px solid #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  main {
+    margin-left: 200px;
+    padding: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    transform: translateX(-200px);
+    transition: transform 0.3s;
+  }
+
+  .sidebar.mobile-active {
+    transform: translateX(0);
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  .admin-table {
+    font-size: 13px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 10px 8px;
+  }
+}
+
+/* Username dropdown styles */
+.username-dropdown {
+  position: absolute;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  width: calc(100% - 2px);
+  margin-top: 2px;
+  left: 0;
+}
+
+.username-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.username-option:hover {
+  background-color: #f5f5f5;
+}
+
+.username-option:last-child {
+  border-bottom: none;
+}

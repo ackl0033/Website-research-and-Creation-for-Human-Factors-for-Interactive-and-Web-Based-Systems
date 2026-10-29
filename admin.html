@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUSS | Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="js/admin.js" defer></script>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="top-banner">
+    <div class="container">
+      <div class="logo">FUSS Admin</div>
+      <div class="admin-actions">
+        <button id="refreshBtn"> Refresh</button>
+        <button id="logoutBtn" class="logout">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <!-- Admin Dashboard Navigation -->
+    <nav>
+      <ul>
+        <li class="active" data-section="dashboard"> Dashboard</li>
+        <li data-section="students"> Student Management</li>
+        <li data-section="credits"> Credit Adjustment</li>
+        <li data-section="skills"> Skill & Category Management</li>
+        <li data-section="moderation"> Content Moderation</li>
+      </ul>
+    </nav>
+        <!-- Regular Page Navigation -->
+    <div class="nav-divider"></div>
+    <nav class="regular-nav" role="navigation" aria-label="Main navigation">
+      <a href="search.php" class="nav-link"><span>Search</span></a>
+      <a href="request.php" class="nav-link"><span>Request</span></a>
+      <a href="messages.php" class="nav-link"><span>Messages</span></a>
+      <a href="profile.php" class="nav-link"><span>Profile</span></a>
+      <a href="settings.php" class="nav-link"><span>Settings</span></a>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="content">
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="panel active">
+      <h1>System Overview</h1>
+      <div class="stats-grid">
+        <div class="stat-card"><h3>Total Students</h3><p id="totalStudents"></p></div>
+        <div class="stat-card"><h3>Active Students</h3><p id="activeStudents"></p></div>
+        <div class="stat-card"><h3>Active Requests</h3><p id="activeSkills"></p></div>
+        <div class="stat-card"><h3>Total FUSS Credits</h3><p id="totalCredits"></p></div>
+      </div>
+      <h2>Popular Skills</h2>
+      <ul class="list">
+        <li>📘 COMP2030 Tutoring</li>
+        <li>💻 HTML/CSS Help</li>
+        <li>📝 Essay Proofreading</li>
+        <li>🎨 Poster Design</li>
+        <li>🗣️ Language Exchange</li>
+      </ul>
+    </section>
+
+    <!-- STUDENT MANAGEMENT -->
+    <section id="students" class="panel">
+      <h1>Student Management</h1>
+      <table class="admin-table">
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Email</th><th>Credits</th><th>Status</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="studentTable">
+          <!-- Student rows will be populated by JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CREDIT ADJUSTMENT -->
+    <section id="credits" class="panel">
+      <h1>FUSSCredit Adjustment</h1>
+      <form id="creditForm">
+        <div style="position: relative;">
+          <label for="studentUsername">Student Username</label>
+          <input type="text" id="studentUsername" placeholder="Enter student username" autocomplete="off">
+          <div id="usernameDropdown" class="username-dropdown" style="display: none;"></div>
+        </div>
+
+        <label for="creditAmount">Adjustment Amount</label>
+        <input type="number" id="creditAmount" placeholder="Positive or negative value">
+
+        <button type="submit" class="btn primary">Apply Adjustment</button>
+      </form>
+      <p id="creditMessage" class="message"></p>
+    </section>
+
+    <!-- SKILL & CATEGORY MANAGEMENT -->
+    <section id="skills" class="panel">
+      <h1>Skill & Category Management</h1>
+
+      <h2>Categories</h2>
+      <ul id="categoryList" class="list">
+        <li>Academic</li>
+        <li>Tech Support</li>
+        <li>Life Skills</li>
+        <li>Creative</li>
+      </ul>
+
+      <form id="addCategoryForm" class="inline-form">
+        <input type="text" id="newCategory" placeholder="Add new category">
+        <button type="submit" class="btn">Add</button>
+      </form>
+
+      <h2>Recent Skills</h2>
+      <table class="admin-table">
+        <thead><tr><th>ID</th><th>Title</th><th>Student</th><th>Category</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>15</td>
+            <td>COMP2030 Tutoring</td>
+            <td>John Johnson</td>
+            <td>Academic</td>
+            <td><span class="status active">Active</span></td>
+            <td><button class="btn small deactivate">Deactivate</button></td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Poster Design</td>
+            <td>Kevin Wang</td>
+            <td>Creative</td>
+            <td><span class="status active">Active</span></td>
+            <td><button class="btn small deactivate">Deactivate</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CONTENT MODERATION -->
+    <section id="moderation" class="panel">
+      <h1>Content Moderation</h1>
+      <h2>Flagged Messages</h2>
+      <table class="admin-table">
+        <thead><tr><th>ID</th><th>From</th><th>To</th><th>Message</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>7</td>
+            <td>Michael Lee</td>
+            <td>Emily Wang</td>
+            <td>“Your profile picture is inappropriate.”</td>
+            <td><button class="btn small delete">Delete</button></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>John Smith</td>
+            <td>Sarah Johnson</td>
+            <td>“Unrelated spam message.”</td>
+            <td><button class="btn small delete">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
+

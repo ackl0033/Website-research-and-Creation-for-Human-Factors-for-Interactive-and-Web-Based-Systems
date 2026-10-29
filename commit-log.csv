@@ -1,0 +1,227 @@
+b929024,ackl0033,5 hours ago,Merge pull request #80 from edga0028/ackl0033
+4442c8b,ackl0033,5 hours ago,Merge pull request #79 from edga0028/main
+3b74d77,Newb0085,6 hours ago,Merge pull request #78 from edga0028/bug-fix/edga0028/fixing-profile-pic
+6be6ac0,edga0028,6 hours ago,fix and add admin
+0a46d48,kepp0006,8 hours ago,Merge pull request #77 from edga0028/main
+d6c9aa8,kepp0006,8 hours ago,Merge pull request #76 from edga0028/Work_kepp0006
+f15f08d,kepp0006,8 hours ago,Merge pull request #75 from edga0028/main
+ad1f36f,ackl0033,8 hours ago,Merge pull request #74 from edga0028/ackl0033
+b115e39,ackl0033,10 hours ago,Merge pull request #73 from edga0028/main
+5330431,ackl0033,19 hours ago,Merge pull request #72 from edga0028/ackl0033
+e1f2ada,ackl0033,19 hours ago,Implement username-based credit adjustment and autocomplete feature in admin dashboard
+7938437,ackl0033,22 hours ago,Merge pull request #71 from edga0028/main
+8bf17a8,ackl0033,22 hours ago,Merge branch 'ackl0033' into main
+4eeed7f,ackl0033,22 hours ago,Admin Student management and deletion.
+c3079f8,kepp0006,23 hours ago,Merge pull request #70 from edga0028/main
+d24af97,ackl0033,23 hours ago,Merge pull request #69 from edga0028/Work_kepp0006
+2af1d54,kepp0006,23 hours ago,Merge branch 'Work_kepp0006' of https://github.com/edga0028/COMP2030-Assignment into Work_kepp0006
+8979a59,kepp0006,23 hours ago,changes to profile
+a933b66,kepp0006,24 hours ago,Merge pull request #68 from edga0028/main
+d025d2b,ackl0033,24 hours ago,Merge pull request #67 from edga0028/Work_kepp0006
+8900d37,kepp0006,24 hours ago,Merge branch 'Work_kepp0006' of https://github.com/edga0028/COMP2030-Assignment into Work_kepp0006
+c5fa950,kepp0006,24 hours ago,done everything from accepting requests through messages setting up times, calander with meeting confirmation which will change over tokes, fixed sign in and other locations.
+41501f3,ackl0033,27 hours ago,Disabled direct requests to Admins
+5dfaa5e,kepp0006,27 hours ago,Merge pull request #66 from edga0028/main
+ff446f0,ackl0033,27 hours ago,Merge pull request #65 from edga0028/Work_kepp0006
+37c39b5,ackl0033,27 hours ago,Merge branch 'main' into Work_kepp0006
+f18e68c,kepp0006,27 hours ago,getting the direct requests working as well as accepting requests and a calender in the home page
+689c5cc,kepp0006,27 hours ago,Merge pull request #64 from edga0028/ackl0033
+bb072e5,ackl0033,27 hours ago,Admin Dashboard navigation
+efd1300,ackl0033,30 hours ago,Merge pull request #63 from edga0028/main
+43ab5b7,ackl0033,30 hours ago,Merge pull request #62 from edga0028/Work_kepp0006
+4d51a23,kepp0006,30 hours ago,Merge branch 'Work_kepp0006' of https://github.com/edga0028/COMP2030-Assignment into Work_kepp0006
+01cdeb6,kepp0006,30 hours ago,starting on the accept request feature being sent to messages
+c6ee4d5,ackl0033,31 hours ago,Merge pull request #61 from edga0028/main
+e9d3656,kepp0006,2 days ago,Merge pull request #60 from edga0028/main
+ff94d15,kepp0006,2 days ago,Merge pull request #59 from edga0028/Work_kepp0006
+a24663b,kepp0006,2 days ago,Creating entire message system, request deletion and other changes
+6d59787,kepp0006,2 days ago,Merge pull request #58 from edga0028/main
+0fd826a,ackl0033,2 days ago,Merge pull request #57 from edga0028/Work_kepp0006
+0cccd57,kepp0006,2 days ago,Merge branch 'main' into Work_kepp0006
+8d65117,kepp0006,2 days ago,commit silkverside
+703682c,kepp0006,2 days ago,Merge pull request #56 from edga0028/ackl0033
+245685c,ackl0033,2 days ago,Admin delete to profile page. (No function)
+ede8738,ackl0033,2 days ago,Direct Request button and message button for non-owners (isOwner=false). Profile page.
+34a7dbf,ackl0033,2 days ago,Merge pull request #55 from edga0028/main
+8f95a92,kepp0006,2 days ago,Merge pull request #54 from edga0028/ackl0033
+aae4415,ackl0033,2 days ago,Added a direct messages mode to request page. (Uses 'isDirect' as variable)
+30fb155,kepp0006,3 days ago,Merge pull request #53 from edga0028/new_kepp0006
+19531e8,kepp0006,3 days ago,Making settings changed to db and showing it all
+41ecdbb,edga0028,3 days ago,Merge pull request #52 from edga0028/test_kepp0006
+0e0e522,kepp0006,3 days ago,Merge branch 'main' into test_kepp0006
+5535cdc,kepp0006,3 days ago,Massive profile changes
+74228a5,ackl0033,4 days ago,Merge pull request #50 from edga0028/ackl0033
+25d8838,ackl0033,4 days ago,Updated the request page the include tags for requests
+70bf673,ackl0033,4 days ago,Merge pull request #49 from edga0028/messages/newb0085/created
+3bc21fa,Newbert0,4 days ago,made sidebar better and made messages.html
+932faf8,Newbert0,4 days ago,made sidebar better and made messages.html
+8d479d1,ackl0033,4 days ago,turned on admin mode for search page (isAdmin = true)
+70e2b54,ackl0033,4 days ago,Turned on admin. Fixed remove service button colour on search page.
+81dd47f,kepp0006,4 days ago,Merge pull request #47 from edga0028/schema-update/edga0028-
+08750fb,edga0028,4 days ago,Merge branch 'main' into schema-update/edga0028-
+c46050b,ackl0033,4 days ago,Merge pull request #46 from edga0028/ackl0033
+4f40ce8,ackl0033,4 days ago,Result card decription given an overflow box if too long, slight card formmating changes.
+bcd2dcd,edga0028,4 days ago,register and login working
+5748a01,ackl0033,4 days ago,enhance search.html with admin controls for managing filter options and improved card layout
+a8a3ae3,kepp0006,4 days ago,Merge pull request #44 from edga0028/Kepp0006
+d4c02b7,kepp0006,4 days ago,Merge pull request #45 from edga0028/testing_kepp0006
+5da1f23,kepp0006,4 days ago,Delete src/home.html
+20b757a,kepp0006,4 days ago,Delete src/profile.html
+1eeb199,kepp0006,4 days ago,Parsing information and other checks
+2cbccfb,edga0028,4 days ago,Merge pull request #43 from edga0028/admin/newb0085/functioning
+a9b4602,Newbert0,4 days ago,added css and js to the admin page
+8950ff9,kepp0006,5 days ago,Php changes and session
+03e44ce,ackl0033,5 days ago,Merge pull request #41 from edga0028/ackl0033
+bf96049,ackl0033,5 days ago,added addition remove buttons and an inactive page delete button for admin (isAdmin = true).
+c0628ee,ackl0033,5 days ago,aDDed FUNCTIONAL REMOVE BUTTIONS FOR SKILLS
+1ed7279,kepp0006,5 days ago,Merge pull request #40 from edga0028/Test_kepp0006
+7f87a96,kepp0006,5 days ago,Changes to register.php
+d420646,kepp0006,5 days ago,Merge pull request #39 from edga0028/ackl0033
+02b1755,ackl0033,5 days ago,re-upload of whole js script.
+4f6350e,ackl0033,5 days ago,Merge branch 'main' into ackl0033
+7789095,ackl0033,5 days ago,Removed duplicate folders, re-applied search page changes.
+7be6d1d,edga0028,5 days ago,Merge branch 'main' of https://github.com/edga0028/COMP2030-Assignment
+4668d3c,ackl0033,5 days ago,Deleted duplicate folders. re-applied search page changes
+4fe4371,Newb0085,5 days ago,Merge pull request #37 from edga0028/PHP-adding/edga0028
+9fafeaf,edga0028,5 days ago,hooraydbworking
+e536a0d,edga0028,5 days ago,fixing format
+d80607d,edga0028,5 days ago,sorting out db connection
+631f841,edga0028,5 days ago,Update settings.html
+f26d668,edga0028,5 days ago,Merge pull request #36 from edga0028/setting/newb0085/improvement
+dcd8f33,Newb0085,5 days ago,Merge pull request #35 from edga0028/ackl0033
+d017ca3,Newbert0,5 days ago,Update settings.html
+613756b,Newb0085,5 days ago,Update admin.html
+8158009,Newb0085,5 days ago,Update settings.html
+0eea74e,ackl0033,5 days ago,Updated time range filter on search page, made filterable user reults
+c08a467,ackl0033,6 days ago,Merge pull request #34 from edga0028/ackl0033
+e92d5d9,ackl0033,6 days ago,Added A 'Type' filter for users and skills. Started user results
+5979eb7,ackl0033,6 days ago,Disabled the editing functions on the profile page for non admin/owner users
+dd50859,ackl0033,6 days ago,Added additional filters to search page. They are bugged tho
+cb58b97,Newb0085,6 days ago,Merge pull request #33 from edga0028/database/edga0028/creating-and-starting-data-base
+56ae8c1,edga0028,7 days ago,database php
+8e1ab15,Newbert0,7 days ago,moved file
+dcb5c7f,Newb0085,7 days ago,Merge pull request #32 from edga0028/movingFiles/newb0085
+b42250d,Newbert0,7 days ago,moving files
+092a716,edga0028,7 days ago,Merge pull request #30 from edga0028/profilepage/newb0085
+c446da7,edga0028,7 days ago,Merge pull request #31 from edga0028/UpdateScriptJs/Newb0085
+8cba309,Newb0085,7 days ago,Update script.js
+23ca037,Newbert0,7 days ago,Update profile.html
+6e81da5,edga0028,7 days ago,Merge pull request #29 from edga0028/settings/newb0085
+0aa77f1,Newbert0,7 days ago,profile pic
+50fc639,Newb0085,7 days ago,Update script.js
+c695487,Newb0085,7 days ago,Update script.js
+9f90171,Newb0085,7 days ago,Update styles.css
+e453ba9,Newb0085,7 days ago,Update settings.html
+49dbc2a,Newbert0,7 days ago,moved files
+a5b7269,ackl0033,7 days ago,Rename *signUp.html to signUp.html
+ee7ec93,ackl0033,7 days ago,Rename *settings.html to settings.html
+1d43d60,ackl0033,7 days ago,Rename *profile.html to profile.html
+e0d3146,ackl0033,7 days ago,Rename *messages.html to messages.html
+f9d190c,ackl0033,7 days ago,Rename *admin.html to admin.html
+3acd6ca,ackl0033,7 days ago,Merge pull request #25 from edga0028/SignInHTML/newb0085
+5c71e1b,ackl0033,7 days ago,Merge pull request #26 from edga0028/register.html/newb0085
+87aa832,Newb0085,7 days ago,Create register.php
+d03d055,Newb0085,7 days ago,Create login.php
+08f6b42,Newb0085,7 days ago,Create register.html
+761306b,ackl0033,7 days ago,Merge pull request #24 from edga0028/searchUpdate/newb0085
+6261d44,Newb0085,8 days ago,Update and rename *signIn.html to signIn.html
+9122220,Newb0085,8 days ago,Update search.html
+865a169,ackl0033,8 days ago,Merge pull request #22 from edga0028/htmlFiles/newb0085/setup
+e477ebc,Newb0085,8 days ago,Create *admin.html
+9d32a9d,Newb0085,8 days ago,*settings.html
+99e0a0a,Newb0085,8 days ago,Create settings.html
+9f1e282,Newb0085,8 days ago,sign in page
+c4ad98b,Newb0085,8 days ago,sign in page
+741281c,Newb0085,8 days ago,Create *signUp.html
+8bb9c63,Newb0085,8 days ago,Update styles.css
+d56f16a,Newb0085,8 days ago,Update and rename *request.html to request.html
+cc2d591,Newb0085,8 days ago,Create p
+09cd15d,Newb0085,8 days ago,Update home.html
+c4e9129,Newb0085,8 days ago,Update pageTemplate.html
+2bf29cb,Newb0085,8 days ago,new pageTemplate.html
+8eb6496,Newb0085,8 days ago,Rename pageTemplate.html to pageTemplate(old).html
+a955ca7,Newb0085,8 days ago,home page .css added
+23fc548,Newb0085,8 days ago,Update and rename *home.html to home.html
+e734280,Newb0085,8 days ago,Update script.js
+9c08bf3,Newb0085,8 days ago,Update script.js
+981c303,Newb0085,8 days ago,Create script.js
+833e573,Newb0085,8 days ago,Update styles.css
+5f46dd5,Newb0085,8 days ago,Create styles.css
+162342f,Newb0085,8 days ago,Create *profile.html
+d7a9ba2,Newb0085,8 days ago,Create *messages.html
+a7d7714,Newb0085,8 days ago,Create *request.html
+a956701,Newb0085,8 days ago,Create *home.html
+d6849b5,Newb0085,8 days ago,Merge pull request #21 from edga0028/origin/ackl0033_Branch
+39cf0a0,ackl0033,9 days ago,Seaerch page start
+e432201,ackl0033,9 days ago,Dropdown button added
+c3a9433,ackl0033,9 days ago,Images on pages
+115cf00,ackl0033,9 days ago,Merge pull request #20 from edga0028/origin/ackl0033_Branch
+ecdc45e,ackl0033,9 days ago,Merge branch 'origin/ackl0033_Branch' of https://github.com/edga0028/COMP2030-Assignment into origin/ackl0033_Branch
+791024f,ackl0033,9 days ago,Merge pull request #19 from edga0028/origin/ackl0033_Branch
+09c70ff,ackl0033,9 days ago,Merge pull request #18 from edga0028/main
+350697c,ackl0033,9 days ago,Merge pull request #17 from edga0028/origin/ackl0033_Branch
+da08561,ackl0033,9 days ago,update
+855b4e7,ackl0033,9 days ago,template
+7f78bf7,ackl0033,9 days ago,Delete project-docs/Website Folder/Individual parts/Page Template.html
+043549d,ackl0033,9 days ago,Rename Page Template to Page Template.html
+26c56e2,ackl0033,9 days ago,Create Page Template
+cb22ee0,ackl0033,9 days ago,Merge pull request #16 from edga0028/main
+cb5d54c,ackl0033,10 days ago,Template added
+2777f46,ackl0033,4 weeks ago,Rename
+dfbbc8a,edga0028,4 weeks ago,Merge pull request #15 from edga0028/creatingweb/ega0028/foundationalcode
+65f1e59,edga0028,4 weeks ago,commit foudnaiton
+03331ec,edga0028,4 weeks ago,tesing workspace
+113dd7b,edga0028,4 weeks ago,Create webHTML
+15fee89,ackl0033,4 weeks ago,Merge pull request #14 from edga0028/uploadingfile/edga0028/uploading-file-for-website
+e44950f,edga0028,4 weeks ago,adding folders
+53387b7,edga0028,5 weeks ago,Update Dockerfile
+ab35579,kepp0006,7 weeks ago,Merge pull request #13 from edga0028/Kepp0006_Branch
+3eb45c6,kepp0006,7 weeks ago,Add files via upload
+04286b7,kepp0006,7 weeks ago,Merge pull request #12 from edga0028/Kepp0006_Branch
+c0b7deb,kepp0006,7 weeks ago,Add files via upload
+4323eaa,kepp0006,7 weeks ago,Create Logs
+690a0ac,kepp0006,7 weeks ago,Delete project-docs/Commit Logs
+827c141,kepp0006,7 weeks ago,Merge pull request #11 from edga0028/Kepp0006_Branch
+ada51fb,kepp0006,7 weeks ago,Create Commit Logs
+66876bf,edga0028,7 weeks ago,Merge branch 'main' of https://github.com/edga0028/COMP2030-Assignment
+bb31469,edga0028,7 weeks ago,logs
+ee66c57,edga0028,7 weeks ago,trying to fix log commit
+b62af97,edga0028,7 weeks ago,commit logs
+4015d2f,edga0028,7 weeks ago,Merge pull request #10 from edga0028/moving-files/edga0028/moving-files-so-only-main-assignment-is-in
+000cb7f,edga0028,7 weeks ago,moving files
+d6f0b1b,edga0028,7 weeks ago,Merge pull request #9 from edga0028/file-merge-3/edga0028/fuckin-file-names-arent-working-with-me
+1dd91b3,edga0028,7 weeks ago,Update User Research and Low Fidelity Design.md
+abfe32c,edga0028,7 weeks ago,Merge pull request #8 from edga0028/main
+9d2e15e,edga0028,7 weeks ago,Merge pull request #7 from edga0028/file-merge/edga0028/merging-images-n-other-info-to-main-assignment-file
+b32667c,edga0028,7 weeks ago,Merge pull request #6 from edga0028/file-merge-pt-2/edga0028/merging-images-n-other-info-into-main-doc
+89513e4,edga0028,7 weeks ago,changing spaces
+ecc8642,edga0028,7 weeks ago,Update User Research and Low Fidelity Design.md
+c541eb9,edga0028,7 weeks ago,Merge pull request #5 from edga0028/file-merge/edga0028/merging-images-n-other-info-to-main-assignment-file
+e4d089c,edga0028,7 weeks ago,Update User Research and Low Fidelity Design.md
+f53676e,edga0028,7 weeks ago,correcting names
+1bfc997,edga0028,7 weeks ago,Merge pull request #4 from edga0028/file-addition/edga0028/adding-images-of-storyboard's-and-wireframes
+109f056,edga0028,7 weeks ago,added files
+e62a871,ackl0033,7 weeks ago,adjusted image captions
+fdf37e8,ackl0033,7 weeks ago,Merge branch 'origin/ackl0033_Branch'
+d292301,ackl0033,7 weeks ago,Split the user flow diagrams for better clarity
+889c376,ackl0033,7 weeks ago,Merge branch 'origin/ackl0033_Branch'
+af35993,ackl0033,7 weeks ago,md file implementation
+fc7eb2a,Newb0085,7 weeks ago,Update User Research and Low Fidelity Design.md
+fc0b219,Newb0085,7 weeks ago,Update User Research and Low Fidelity Design.md
+7b1418b,Newb0085,7 weeks ago,Merge pull request #3 from edga0028/newb0085/md-file-made
+7fd0880,Newb0085,7 weeks ago,Add files via upload
+b5cba35,ackl0033,7 weeks ago,IA images
+96b6c11,ackl0033,7 weeks ago,Image file in part 1
+41ab246,Newb0085,7 weeks ago,Merge pull request #2 from edga0028/newb0085/img
+93203d9,Newb0085,7 weeks ago,Delete p1-p3/img/blah
+6afa218,Newb0085,7 weeks ago,Rename p1-p3/isabella.png to p1-p3/img/isabella.png
+fc2c322,Newb0085,7 weeks ago,Rename p1-p3/Ryback.png to p1-p3/img/Ryback.png
+2b050e9,Newb0085,7 weeks ago,Rename p1-p3/Kevin.png to p1-p3/img/Kevin.png
+6141a98,Newb0085,7 weeks ago,Create test
+d27437a,Newb0085,7 weeks ago,persona images
+5adf289,edga0028,7 weeks ago,Merge pull request #1 from edga0028/Kepp0006_Branch
+4035e9a,kepp0006,8 weeks ago,Create Project Proposal
+7a5b61e,edga0028,9 weeks ago,Update persona-drafts.md
+4f010b3,edga0028,9 weeks ago,Create persona-drafts.md
+90b17af,edga0028,9 weeks ago,adding text docs
+3e61e48,edga0028,9 weeks ago,Initial commit

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FUSS | Flinders Uni Skill Share</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="top-banner" role="banner" aria-label="Site header">
+    <div class="container">
+      <div class="banner-left">
+        <div class="logo">FUSS</div>
+        <div class="message">Flinders University Skill Share Program</div>
+      </div>
+
+      <div class="banner-actions">
+        <div class="dropdown" aria-label="Language selector">
+          <button id="dropdownButton">Languages ▼</button>
+          <div class="dropdown-content" id="dropdownContent">
+            <a href="#" class="dropdownLanguage">English</a>
+            <a href="#" class="dropdownLanguage">中文</a>
+            <a href="#" class="dropdownLanguage">日本語</a>
+          </div>
+        </div>
+
+        <!-- PHP session placeholder -->
+        <?php if (isset($_SESSION['username'])): ?>
+          <span class="welcome-text">Welcome, <?= htmlspecialchars($_SESSION['username']) ?></span>
+        <?php endif; ?>
+
+        <button class="logOutBtn" onclick="window.location.href='signIn.html'">Log Out</button>
+        <button id="menuToggle" aria-label="Toggle sidebar">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" role="navigation" aria-label="Main navigation">
+    <a href="home.html" class="nav-link"><span>Home</span></a>
+    <a href="search.html" class="nav-link"><span>Search</span></a>
+  <a href="request.php" class="nav-link"><span>Request</span></a>
+    <a href="messages.html" class="nav-link"><span>Messages</span></a>
+    <a href="profile.html" class="nav-link"><span>Profile</span></a>
+    <a href="settings.html" class="nav-link"><span>Settings</span></a>
+  </nav>
+
+  <!-- Main Page Content -->
+  <main role="main">
+    <h1>Page Title</h1>
+    <p>This is where the page-specific content will go.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Flinders Uni Skill Share (FUSS)</p>
+  </footer>
+</body>
+</html>

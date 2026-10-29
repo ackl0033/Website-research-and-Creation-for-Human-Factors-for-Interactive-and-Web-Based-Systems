@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FUSS | Sign In</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /*Sign In Styling */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(180deg,#1e3a8a,#0f172a);
+      color: #fff;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto;
+    }
+
+    .login-container {
+      background: white;
+      color: #111;
+      width: 100%;
+      max-width: 400px;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .login-container h1 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #1e3a8a;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    button {
+      background: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #334155;
+    }
+
+    .extra-links {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .extra-links a {
+      color: #1e3a8a;
+      text-decoration: none;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      display: none;
+    }
+
+    .success-message {
+      color: green;
+      font-size: 14px;
+      text-align: center;
+      display: none;
+    }
+
+    @media (max-width: 480px) {
+      .login-container {
+        margin: 0 16px;
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container" role="main">
+    <h1>Sign In to FUSS</h1>
+
+    <p id="loginError" class="error-message" aria-live="assertive"></p>
+    <p id="loginSuccess" class="success-message" aria-live="polite"></p>
+
+    <form id="loginForm" action="php/login.php" method="POST" novalidate>
+     <div class="test-credentials">
+    <strong>Demonstrative admin login:</strong><br>
+    user: <code>admin</code><br>
+    pass: <code>Admin123!</code>
+  </div>
+  
+     
+      <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="submit">Sign In</button>
+    </form>    <div class="extra-links">
+      <a href="register.html">Create Account</a>
+      <a href="#">Forgot Password?</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const errorMsg = document.getElementById('loginError');
+    const successMsg = document.getElementById('loginSuccess');
+
+    // Read URL params once
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+    const msg = urlParams.get('msg');
+    const success = urlParams.get('success');
+
+    if (error) {
+      let errorText = '';
+      switch(error) {
+        case 'suspended':
+          // Format message: replace \n with <br>, add title
+          let suspensionMsg = msg || '';
+          suspensionMsg = suspensionMsg.replace(/\\n|\n/g, '<br>');
+          errorText = `<strong>Account Suspended</strong><br>${suspensionMsg}`;
+          // Show formatted message in error box, not alert
+          break;
+        case 'invalid_password':
+          errorText = '❌ Invalid password.';
+          break;
+        case 'user_not_found':
+          errorText = '❌ User not found.';
+          break;
+        default:
+          errorText = '❌ Login failed.';
+      }
+      // Use innerHTML for suspended (contains <br>), otherwise textContent
+      if (error === 'suspended') {
+        errorMsg.innerHTML = errorText;
+      } else {
+        errorMsg.textContent = errorText;
+      }
+      errorMsg.style.display = 'block';
+      successMsg.style.display = 'none';
+    }
+
+    if (success && !error) {
+      successMsg.textContent = success === '1' ? '✅ Login successful!' : success;
+      successMsg.style.display = 'block';
+      errorMsg.style.display = 'none';
+    }
+
+    // Clear URL parameters after reading them (avoid stale messages on refresh)
+    if (error || success || msg) {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+    form.addEventListener('submit', function(e) {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (!username || !password) {
+        e.preventDefault();
+        errorMsg.textContent = '⚠️ Please fill out all fields.';
+        errorMsg.style.display = 'block';
+        successMsg.style.display = 'none';
+        return;
+      }
+
+      errorMsg.style.display = 'none';
+      successMsg.textContent = 'Signing in...';
+      successMsg.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
+
